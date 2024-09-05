@@ -2,7 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 
 url = "https://www.sbv.gov.vn/TyGia/faces/Aiber.jspx?_afrLoop=4578200756773891&_afrWindowMode=0&_adf.ctrl-state=s2ssddfsz_4"
-response = requests.get(url)
+headers = {
+    "method": "POST",
+    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en-GB;q=0.7,en;q=0.6"
+}
+response = requests.get(url, headers = headers)
 
 if response.status_code == 200:
     retStr = response.text

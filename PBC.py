@@ -4,7 +4,7 @@ from lxml import etree
 
 
 def get_exchange_rate():
-    url = "http://wzdt.pbc.gov.cn:8080/flex-xml/flex_xml_23.xml"
+    url = "http://wzdt.pbc.gov.cn:8080/flex-xml/flex_xml_5.xml"
     response = requests.get(url)
     data = response.content
 
